@@ -9,4 +9,4 @@ nav_order: 11
 ## Basics
 
 ### Function call
-Foliage is generated on a QSM by calling the function 'generate_foliage_qsm_direct'.
+Foliage is generated on a QSM by calling the function `generate_foliage_qsm_direct`.
