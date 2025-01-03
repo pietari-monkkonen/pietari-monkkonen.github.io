@@ -13,13 +13,14 @@ Foliage is generated on a QSM by calling the function `generate_foliage_qsm_dire
 Leaves = generate_foliage_qsm_direct(QSM,TargetDistributions,...
     LeafProperties,totalLeafArea);
 ```
-where `QSM` is a struct containing a quantitative structure model, `TargetDistributions` is a struct containing the target distribution types and parameters for the leaf distributions, `LeafProperties` is a struct containing leaf base geometry and twig length information, and `totalLeafArea` is a value for the total leaf area to be added on the tree model.
+where `QSM` is a structt containing a quantitative structure model, `TargetDistributions` is a struct containing the target distribution types and parameters for the leaf distributions, `LeafProperties` is a struct containing leaf base geometry and twig length information, and `totalLeafArea` is a value for the total leaf area to be added on the tree model.
 
 ## Inputs
 
 ### QSM
 
-LeafGen uses the QSM format produced by the [TreeQSM] method. Optionally, a QSM can be intialized by defining a struct containing the basic information of the cylinders, in which case the required fields for the `qsm` struct are:
+LeafGen uses the QSM format produced by the [TreeQSM] method. Optionally, a QSM can be intialized by defining a struct containing the basic information of the cylinders, in which case the required fields for the `QSM` struct are:
+
 |Field name|Description|Type|
 |:-|:-|:-|
 |`cylinder.start`|Cylinder start points|single|
@@ -32,9 +33,6 @@ LeafGen uses the QSM format produced by the [TreeQSM] method. Optionally, a QSM 
 
 ### Target Distributions
 
-### Leaf Properties
-
-### Total leaf area
 The required fields for the `TargetDistributions` struct are:
 
 |Field name|Description|Type|
@@ -52,6 +50,9 @@ The required fields for the `TargetDistributions` struct are:
 |`dTypeLSD`|LSD distribution type|string|
 |`fun_size_params`|Function for LSD distribution parameters|function handle|
 
+
+### Leaf Properties
+
 The required fields for the `LeafProperties` struct are:
 
 |Field name|Description|Type|
@@ -59,5 +60,11 @@ The required fields for the `LeafProperties` struct are:
 |`petioleLengthLimits`|Leaf petiole length limits|double|
 |`vertices`|Vertice coordinates for leaf base geometry triangles|double|
 |`triangles`|Indicators for the vertices of each triangle|double|
+
+
+### Total leaf area
+
+
+
 
 [TreeQSM]: https://github.com/InverseTampere/TreeQSM
