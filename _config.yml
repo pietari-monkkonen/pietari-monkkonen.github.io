@@ -21,3 +21,8 @@ nav_enabled: true
 
 # For copy button on code
 enable_copy_code_button: true
+
+# Render math formulae as in latex
+mathjax: true
+includes:
+  - head_custom.html
