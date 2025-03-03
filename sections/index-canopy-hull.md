@@ -51,7 +51,8 @@ The required fields for the `LeafProperties` struct are:
 |`vertices`           |Vertice coordinates for leaf base geometry triangles|double|
 |`triangles`          |Indicators for the edges of each triangle           |double|
 
-{: .note } In LeafGen, a single leaf is considered to have only one surface normal, which is in the direction of vertical axis (z-axis) of the leaf base geometry. Therefore, for 3D base geometries, the geometry should be defined such that the average normal has vertical direction.
+{: .note } 
+In LeafGen, a single leaf is considered to have only one surface normal, which is in the direction of vertical axis (z-axis) of the leaf base geometry. Therefore, for 3D base geometries, the geometry should be defined such that the average normal has vertical direction.
 
 
 ### Total leaf area
