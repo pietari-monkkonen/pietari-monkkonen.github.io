@@ -58,7 +58,7 @@ Options for the marginal distribution function of compass direction `dTypeLADDc`
 
 | Distribution | `dTypeLADDc` | Function Definition                                                     |
 |--------------|--------------|-------------------------------------------------------------------------|
-| uniform      | `'uniform'`  | $f(x) = 2\pi$                                                           |
+| uniform      | `'uniform'`  | $f(x) = 1/2\pi$                                                           |
 | von Mises    | `'vonmises'` | $f(x,\mu,\kappa) = e^{\kappa \cos(x-\mu)}/(2 \pi \mathrm{I}_0(\kappa))$ |
 
 Here $I_0(\kappa) = \frac{1}{2\pi} \int_0^{2\pi} e^{\kappa \cos(x)} dx$ is the modified Bessel function of the first kind of order 0.
@@ -112,7 +112,7 @@ Options for the marginal distribution function of leaf azimuth angle `dTypeLODaz
 
 | Distribution   | `dTypeLODaz` | Function Definition                                                           |
 |----------------|--------------|-------------------------------------------------------------------------------|
-| uniform        | `'uniform'`  | $f(phi) = 2/\pi$                                                              |
+| uniform        | `'uniform'`  | $f(\phi) = 1/2\pi$                                                              |
 | von Mises      | `'vonmises'` | $f(\phi,\mu,\kappa) = e^{\kappa \cos(\phi-\mu)}/(2 \pi \mathrm{I}_0(\kappa))$ |
 | constant value | `'constant'` | -                                                                             |
 
