@@ -1,7 +1,8 @@
 ---
 title: Canopy hull method
+parent: Basic functionality
 layout: default
-nav_order: 31
+nav_order: 3
 ---
 
 # Canopy hull method

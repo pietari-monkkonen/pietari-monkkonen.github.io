@@ -1,7 +1,8 @@
 ---
 title: QSM leaf cylinder library method
+parent: Basic functionality
 layout: default
-nav_order: 21
+nav_order: 2
 ---
 
 # QSM leaf cylinder library method
