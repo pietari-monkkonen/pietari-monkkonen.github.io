@@ -6,6 +6,8 @@ nav_order: 91
 
 # Additional information
 
+{:toc}
+
 ## Leaf base geometry
 
 The leaf base geometry is composed of a collection of triangles that define the leaf surface. The assumptions for the base geometry are:
