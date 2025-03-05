@@ -45,5 +45,3 @@ callouts:
     title: Warning
     color: red
 
-    # Using kramdown parser for Markdown to get table of contents (with {:toc} command)
-    markdown: kramdown
