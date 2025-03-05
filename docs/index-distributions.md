@@ -1,5 +1,6 @@
 ---
 title: Leaf distribution options
+layout: default
 nav_order: 41
 ---
 

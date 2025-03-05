@@ -1,5 +1,6 @@
 ---
 title: Additional information
+layout: default
 nav_order: 81
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Canopy hull method
+layout: default
 nav_order: 31
 ---
 

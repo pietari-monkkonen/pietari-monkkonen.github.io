@@ -1,5 +1,6 @@
 ---
 title: QSM direct method
+layout: default
 nav_order: 11
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: QSM leaf cylinder library method
+layout: default
 nav_order: 21
 ---
 
