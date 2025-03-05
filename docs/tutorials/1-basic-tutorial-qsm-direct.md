@@ -11,7 +11,7 @@ This tutorial goes over the example code `main_qsm_direct.m` provided along the 
 
 ## Initialization
 
-The code starts by clearing the workspace (were the variables are stored), closing all open figures, and adding the paths to subdirectories required in this demonstration.
+The code starts by clearing the workspace (were the variables are stored), closing all open figures, and adding the paths to subdirectories required in this demo.
 
 ```matlab
 clear, close all
@@ -31,6 +31,22 @@ QSM = importdata(filename);
 ```
 
 The example QSM is of the format given by [TreeQSM], but the input QSM could also be a struct containing information of the QSM cylinders (see [QSM direct method]({% link docs/basic-functionality/1-qsm-direct.md %}))
+
+## Defining leaf base geometry
+
+The leaf base geometry is defined by setting the vertice points of the geometry and indicating the triangles with respect to the vertices. These values are assigned to the `LeafProperties` struct.
+
+```matlab
+% Vertices of the leaf base geometry
+LeafProperties.vertices = [-0.04  0.02   0.0;
+                           0.0    0.10   0.0;
+                           0.04   0.02   0.0;
+                           0.0    0.0    0.0];
+
+% Triangles of the leaf base geometry
+LeafProperties.triangles = [1, 2, 4;
+                            2, 3, 4];
+```
 
 
 [TreeQSM]: https://github.com/InverseTampere/TreeQSM
