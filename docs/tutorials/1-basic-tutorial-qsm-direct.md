@@ -38,15 +38,19 @@ The leaf base geometry is defined by setting the vertice points of the geometry 
 
 ```matlab
 % Vertices of the leaf base geometry
-LeafProperties.vertices = [-0.04  0.02   0.0;
+LeafProperties.vertices = [0.0    0.0    0.0;
+                           -0.04  0.02   0.0;
                            0.0    0.10   0.0;
-                           0.04   0.02   0.0;
-                           0.0    0.0    0.0];
+                           0.04   0.02   0.0];
 
 % Triangles of the leaf base geometry
-LeafProperties.triangles = [1, 2, 4;
-                            2, 3, 4];
+LeafProperties.triangles = [1, 2, 3;
+                            1, 3, 4];
 ```
+
+These matrices define a leaf geometry based on two triangles which looks like this:
+
+![](../../docs/tutorials/images/base-geometry-visualization.pdf)
 
 
 [TreeQSM]: https://github.com/InverseTampere/TreeQSM
