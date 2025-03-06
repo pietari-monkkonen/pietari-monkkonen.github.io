@@ -50,7 +50,7 @@ LeafProperties.triangles = [1, 2, 3;
 
 These matrices define a leaf geometry based on two triangles which looks like this:
 
-![leaf base geometry](/assets/images/base-geometry-visualization.png)
+![leaf base geometry](/assets/images/base-geometry-visualization.png){: height="250" }
 
 
 [TreeQSM]: https://github.com/InverseTampere/TreeQSM
