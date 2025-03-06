@@ -50,6 +50,8 @@ LeafProperties.triangles = [1, 2, 3;
 
 These matrices define a leaf geometry based on two triangles which looks like this:
 
+<img src="/assets/images/base-geometry-visualization.png" height="200" />
+
 ![leaf base geometry](/assets/images/base-geometry-visualization.png){: height="100" }
 
 
