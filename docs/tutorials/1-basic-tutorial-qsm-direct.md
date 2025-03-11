@@ -53,17 +53,17 @@ In the `LeafProperties.vertices` matrix each row corresponds to a singe vertice 
 <img src="/assets/images/base-geometry-visualization.png" width="250" height="250" />
 
 {: .note } 
-The absolute dimensions of the leaf base geometry are not important, since the base geometry is scaled to the correct size in the LSD sampling phase. Only the shape of the base geometry is reserved.
+The absolute dimensions of the leaf base geometry are not important, since the base geometry is scaled to the correct size in the LSD sampling phase. Only the shape of the base geometry is preserved.
 
 ## Setting petiole length limits
 
-The leaf petioles are sampled unifromly from the interval defined to the `LeafProperties`struct:
+The leaf petioles are sampled unifromly from the interval defined to the `LeafProperties` struct:
 
 ```matlab
 LeafProperties.petioleLengthLimits = [0.08 0.10];
 ```
 
-The units of the length limits are meters.
+The units of the length limits are meters, so in this case the petioles are sampled between 8 and 10 centimeters.
 
 ## Defining target leaf distributions
 
@@ -85,7 +85,7 @@ TargetDistributions.dTypeLADDc = 'vonmises';
 TargetDistributions.cParams = [5/4*pi 0.1];
 ```
 
-Fields `dTypeLADDh` and `hParams` define the distribution type and parameters for the LADD marginal distribution on the relative height, in this case a beta distribution with parameters $\alpha = 22$ and $\beta = 3$.
+Fields `dTypeLADDh` and `hParams` define the distribution type and parameters for the LADD marginal distribution on the relative height, in this case a beta distribution with parameters $\alpha$ = 22 and $\beta$ = 3. Similarly, `dTypeLADDd` and `dParams` define the relative branch distance marginal distribution as a truncated Weibull distributions with scale parameter 3.3 and shape parameter 2.8, and `dTypeLADDc` and `cParams` define the compass direction margina distribution as a von Mises distribution with mean direction $\mu = \frac{5}{4}\pi$ and concentration parameter $\kappa$ = 0.1.
 
 
 [TreeQSM]: https://github.com/InverseTampere/TreeQSM
