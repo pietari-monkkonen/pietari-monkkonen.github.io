@@ -44,13 +44,48 @@ LeafProperties.vertices = [0.0    0.0    0.0;
                            0.04   0.02   0.0];
 
 % Triangles of the leaf base geometry
-LeafProperties.triangles = [1, 2, 3;
-                            1, 3, 4];
+LeafProperties.triangles = [1 2 3;
+                            1 3 4];
 ```
 
-These matrices define a leaf geometry based on two triangles which looks like this:
+In the `LeafProperties.vertices` matrix each row corresponds to a singe vertice point and in the `LeafProperties.triangles` each row contains the row indices of vertices used for the triangles. These matrices define a leaf geometry based on two triangles which looks like this:
 
 <img src="/assets/images/base-geometry-visualization.png" width="250" height="250" />
+
+{: .note } 
+The absolute dimensions of the leaf base geometry are not important, since the base geometry is scaled to the correct size in the LSD sampling phase. Only the shape of the base geometry is reserved.
+
+## Setting petiole length limits
+
+The leaf petioles are sampled unifromly from the interval defined to the `LeafProperties`struct:
+
+```matlab
+LeafProperties.petioleLengthLimits = [0.08 0.10];
+```
+
+The units of the length limits are meters.
+
+## Defining target leaf distributions
+
+The target distribution types and parameters for LADD, LOD, and LSD are defined in the `TargetDistributions` struct.
+
+The LADD marginal distribution types and parameters with respect to the structural variables are defined as:
+
+```matlab
+% LADD relative height
+TargetDistributions.dTypeLADDh = 'beta';
+TargetDistributions.hParams = [22 3];
+
+% LADD relative branch distance
+TargetDistributions.dTypeLADDd = 'weibull';
+TargetDistributions.dParams = [3.3 2.8];
+
+% LADD compass direction
+TargetDistributions.dTypeLADDc = 'vonmises';
+TargetDistributions.cParams = [5/4*pi 0.1];
+```
+
+Fields `dTypeLADDh` and `hParams` define the distribution type and parameters for the LADD marginal distribution on the relative height, in this case a beta distribution with parameters $\alpha = 22$ and $\beta = 3$.
 
 
 [TreeQSM]: https://github.com/InverseTampere/TreeQSM
