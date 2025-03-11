@@ -85,7 +85,7 @@ TargetDistributions.dTypeLADDc = 'vonmises';
 TargetDistributions.cParams = [5/4*pi 0.1];
 ```
 
-Fields `dTypeLADDh` and `hParams` define the distribution type and parameters for the LADD marginal distribution on the relative height, in this case a beta distribution with parameters $\alpha$ = 22 and $\beta$ = 3. Similarly, `dTypeLADDd` and `dParams` define the relative branch distance marginal distribution as a truncated Weibull distributions with scale parameter 3.3 and shape parameter 2.8, and `dTypeLADDc` and `cParams` define the compass direction margina distribution as a von Mises distribution with mean direction $\mu = \frac{5}{4}\pi$ and concentration parameter $\kappa$ = 0.1.
+Fields `dTypeLADDh` and `hParams` define the distribution type and parameters for the LADD marginal distribution on the relative height, in this case a beta distribution with parameters $\alpha$ = 22 and $\beta$ = 3. Similarly, `dTypeLADDd` and `dParams` define the relative branch distance marginal distribution as a truncated Weibull distribution with the scale parameter of $\lambda$ = 3.3 and the shape parameter of $k$ = 2.8, and `dTypeLADDc` and `cParams` define the compass direction marginal distribution as a von Mises distribution with the mean direction of $\mu = \frac{5\pi}{4}$ and the concentration parameter of $\kappa$ = 0.1.
 
 
 [TreeQSM]: https://github.com/InverseTampere/TreeQSM
