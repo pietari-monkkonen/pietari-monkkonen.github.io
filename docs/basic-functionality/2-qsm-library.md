@@ -90,7 +90,7 @@ A struct containing parameters for a phyllotaxis pattern of the leaves. Override
 
  A boolean value for turning intersection prevention of leaves off. Intersection prevention is computationally the heaviest part of the leaf generation, but assures more realistic foliage. If this is not needed, intersection prevention can be turned off. By default intersection prevention is on.
 
- ### Output
+### Output
 
  The output `LeafCylinderLibrary` is a struct which contains the leaf cylinders as `LeafModelTriangle`-class objects, as well as library metadata. It is worth noting that despite the name leaf cylinder, the library does not actually contain explicit models for the cylinders themselves. However, the parameters of the cylinders in library nodes are contained in the library metadata. The fields of the output struct `LeafCylinderLibrary` are:
 
@@ -102,7 +102,7 @@ A struct containing parameters for a phyllotaxis pattern of the leaves. Override
 | `Nodes`             | The `Nodes` struct used in library generation                 | struct |
 | `Properties`        | Library metadata                                              | struct |
 
- ## Transforming leaf cylinders onto QSM
+## Transforming leaf cylinders onto QSM
 
 Foliage is added on a QSM by calling the function `transform_leaf_cylinders`. The format for the basic function call is
 ```matlab
