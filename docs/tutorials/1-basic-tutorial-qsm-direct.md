@@ -74,18 +74,30 @@ The LADD marginal distribution types and parameters with respect to the structur
 ```matlab
 % LADD relative height
 TargetDistributions.dTypeLADDh = 'beta';
-TargetDistributions.hParams = [22 3];
+TargetDistributions.pLADDh = [22 3];
 
 % LADD relative branch distance
 TargetDistributions.dTypeLADDd = 'weibull';
-TargetDistributions.dParams = [3.3 2.8];
+TargetDistributions.pLADDd = [3.3 2.8];
 
 % LADD compass direction
 TargetDistributions.dTypeLADDc = 'vonmises';
-TargetDistributions.cParams = [5/4*pi 0.1];
+TargetDistributions.pLADDc = [5/4*pi 0.1];
 ```
 
-Fields `dTypeLADDh` and `hParams` define the distribution type and parameters for the LADD marginal distribution on the relative height, in this case a beta distribution with parameters $\alpha$ = 22 and $\beta$ = 3. Similarly, `dTypeLADDd` and `dParams` define the relative branch distance marginal distribution as a truncated Weibull distribution with the scale parameter of $\lambda$ = 3.3 and the shape parameter of $k$ = 2.8, and `dTypeLADDc` and `cParams` define the compass direction marginal distribution as a von Mises distribution with the mean direction of $\mu = \frac{5\pi}{4}$ and the concentration parameter of $\kappa$ = 0.1.
+Fields `dTypeLADDh` and `pLADDh` define the distribution type and parameters for the LADD marginal distribution on the relative height, in this case a beta distribution with parameters $\alpha$ = 22 and $\beta$ = 3. Similarly, `dTypeLADDd` and `pLADDd` define the relative branch distance marginal distribution as a truncated Weibull distribution with the scale parameter of $\lambda$ = 3.3 and the shape parameter of $k$ = 2.8, and `dTypeLADDc` and `pLADDc` define the compass direction marginal distribution as a von Mises distribution with the mean direction of $\mu = \frac{5\pi}{4}$ and the concentration parameter of $\kappa$ = 0.1.
+
+The LOD marginal distribution types and parameters with respect to the inclination and azimuth angles of leaf normals are defined as:
+
+```matlab
+% LOD inclination angle
+TargetDistributions.dTypeLODinc = 'dewit';
+TargetDistributions.fun_pLODinc = @(h,d,c) [1 2];
+
+% LOD azimuth angle
+TargetDistributions.dTypeLODaz = 'uniform';
+TargetDistributions.fun_pLODaz = @(h,d,c) [];
+```
 
 
 [TreeQSM]: https://github.com/InverseTampere/TreeQSM

@@ -21,9 +21,9 @@ Options for the marginal distribution function of relative height `dTypeLADDh` a
 
 Here $\mathrm{B}(\alpha,\beta)  = \int_0^1 x^{\alpha-1} (1-x)^{\beta-1} dx$ is the beta function.
 
-The possible parameter values `hParams` are:
+The possible parameter values `pLADDh` are:
 
-| Distribution      | `hParams`     | Parameter Values                 |
+| Distribution      | `pLADDh`     | Parameter Values                 |
 |-------------------|---------------|----------------------------------|
 | uniform           | -             | -                                |
 | beta              | `[a b]`       | `a`, `b` $> 0$                   |
@@ -43,9 +43,9 @@ Options for the marginal distribution function of relative branch distance / rel
 
 Here $\mathrm{B}(\alpha,\beta)  = \int_0^1 x^{\alpha-1} (1-x)^{\beta-1} dx$ is the beta function.
 
-The possible parameter values `dParams` are:
+The possible parameter values `pLADDd` are:
 
-| Distribution      | `dParams`     | Parameter Values                 |
+| Distribution      | `pLADDd`     | Parameter Values                 |
 |-------------------|---------------|----------------------------------|
 | uniform           | -             | -                                |
 | beta              | `[a b]`       | `a`, `b` $> 0$                   |
@@ -63,9 +63,9 @@ Options for the marginal distribution function of compass direction `dTypeLADDc`
 
 Here $I_0(\kappa) = \frac{1}{2\pi} \int_0^{2\pi} e^{\kappa \cos(x)} dx$ is the modified Bessel function of the first kind of order 0.
 
-The possible parameter values `cParams` are:
+The possible parameter values `pLADDc` are:
 
-| Distribution | `cParams`   | Parameter Values               |
+| Distribution | `pLADDc`   | Parameter Values               |
 |--------------|-------------|--------------------------------|
 | uniform      | -           | -                              |
 | von Mises    | `[m k]`     | `m` $\in [0,2\pi]$, `k` $> 0$ |
@@ -74,7 +74,7 @@ The possible parameter values `cParams` are:
 
 For all LADD marginal distributions, it is also possible to define the distributions as mixture models of two distributions of the same type. This allows for a larger variety of marginal distribution shapes, like multimodal distributions. The definition of a mixture model requires setting the parameters of each distribution separately and defining a weighting factor among the distributions. The weighting factor `w` is given a value between 0 and 1, which determines the weights of the distributions to be `w` for the first distribution and 1-`w` for the second distribution. Mixture models can be defined for the following distributions:
 
-| Distribution      | `hParams`/`dParams`/`cParams`   | Parameter Values                  |
+| Distribution      | `pLADDh`/`pLADDd`/`pLADDc`   | Parameter Values                  |
 |-------------------|---------------------------------|-----------------------------------|
 | beta              | `[a1 b1 a2 b2 w]`               | `a1`, `b1`, `a2`, `b2` $> 0$, `w` $\in [0,1]$ |
 | truncated Weibull | `[k1 l1 k2 l2 w]`               | `k1`, `l1`, `k2`, `l2`$> 0$, `w` $\in [0,1]$ |
@@ -96,9 +96,9 @@ Options for the marginal distribution function of leaf inclination angle `dTypeL
 
 Here $\mathrm{B}(\alpha,\beta)  = \int_0^1 x^{\alpha-1} (1-x)^{\beta-1} dx$ is the beta function.
 
-The possible parameter values for the function `fun_inc_params` are:
+The possible parameter values for the function `fun_pLODinc` are:
 
-| Distribution         | `fun_inc_params` | Parameter Values                  |
+| Distribution         | `fun_pLODinc` | Parameter Values                  |
 |----------------------|------------------|-----------------------------------|
 | uniform              | -                | -                                 |
 | spherical            | -                | -                                 |
@@ -118,9 +118,9 @@ Options for the marginal distribution function of leaf azimuth angle `dTypeLODaz
 
 Here $I_0(\kappa) = \frac{1}{2\pi} \int_0^{2\pi} e^{\kappa \cos(x)} dx$ is the modified Bessel function of the first kind of order 0.
 
-The possible parameter values for the function `fun_az_params` are:
+The possible parameter values for the function `fun_pLODaz` are:
 
-| Distribution   | `fun_az_params` | Parameter Values              |
+| Distribution   | `fun_pLODaz` | Parameter Values              |
 |----------------|-----------------|-------------------------------|
 | uniform        | -               | -                             |
 | von Mises      | `[m k]`         | `m` $\in [0,2\pi]$, `k` $> 0$ |
@@ -137,9 +137,9 @@ Options for the distribution function of leaf size distribution `dTypeLSD` are:
 | constant value | `'constant'` | -                                                                              |
 
 
-The possible parameter values for the function `fun_size_params` are:
+The possible parameter values for the function `fun_pLSD` are:
 
-| Distribution   | `fun_size_params` | Parameter Values |
+| Distribution   | `fun_pLSD` | Parameter Values |
 |----------------|-------------------|------------------|
 | uniform        | `[a b]`           | `a`, `b` $> 0$   |
 | normal         | `[m v]`           | `m`, `v` $> 0$   |

@@ -32,15 +32,15 @@ The required fields for the `TargetDistributions` struct are:
 |`dTypeLADDh`     |LADD relative height distribution type                    |string         |
 |`dTypeLADDd`     |LADD relative distance along subbranch distribution type  |string         |
 |`dTypeLADDc`     |LADD compass direction distribution type                  |string         |
-|`hParams`        |LADD heightwise distribution parameters                   |double         |
-|`dParams`        |LADD distancewise distribution parameters                 |double         |
-|`cParams`        |LADD directionwise distribution parameters                |double         |
+|`pLADDh`        |LADD heightwise distribution parameters                   |double         |
+|`pLADDd`        |LADD distancewise distribution parameters                 |double         |
+|`pLADDc`        |LADD directionwise distribution parameters                |double         |
 |`dTypeLODinc`    |LOD inclination angle distribution type                   |string         |
 |`dTypeLODaz`     |LOD azimuth angle distribution type                       |string         |
-|`fun_inc_params` |Function for LOD inclination angle distribution parameters|function handle|
-|`fun_az_params`  |Function for LOD azimuth angle distribution parameters    |function handle|
+|`fun_pLODinc` |Function for LOD inclination angle distribution parameters|function handle|
+|`fun_pLODaz`  |Function for LOD azimuth angle distribution parameters    |function handle|
 |`dTypeLSD`       |LSD distribution type                                     |string         |
-|`fun_size_params`|Function for LSD distribution parameters                  |function handle|
+|`fun_pLSD`|Function for LSD distribution parameters                  |function handle|
 
 
 ### Leaf properties
