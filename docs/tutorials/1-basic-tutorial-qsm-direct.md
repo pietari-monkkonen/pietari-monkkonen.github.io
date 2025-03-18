@@ -99,12 +99,11 @@ TargetDistributions.dTypeLODaz = 'uniform';
 TargetDistributions.fun_pLODaz = @(h,d,c) [];
 ```
 
-The `dTypeLODinc` and `fun_pLODinc` fields define the distribution type for leaf inclination angle and the function for the distribution parameters, in this case a generalized de Wit's distribution with parameters a = 1 and b = 2. The definition of distribution parameters, compared to LADD, is now done with a function, since the shape of LOD is allowed to change with respect to the structural variables. In this example, the parameters for inclination angle are set to be identical for the whole tree, so the field `fun_pLODinc` is set to be a handle for a constant function over all variable values. The `dTypeLODaz` and `fun_pLODaz`  fields define the distribution type and parameters for the leaf azimuth angle, in this case a uniform distribution and thus an empty parameter function as no parameters are needed for uniform distribuion.
+The `dTypeLODinc` and `fun_pLODinc` fields define the distribution type for leaf inclination angle and the function for the distribution parameters, in this case a generalized de Wit's distribution with parameters a = 1 and b = 2. The definition of distribution parameters, compared to LADD, is now done with a function, since the shape of LOD is allowed to change with respect to the structural variables. In this example, the parameters for inclination angle are set to be identical for the whole tree, so the field `fun_pLODinc` is set to be a handle for a constant function over all variable values. The `dTypeLODaz` and `fun_pLODaz`  fields define the distribution type and parameters for the leaf azimuth angle, in this case a uniform distribution and thus an empty parameter function as no parameters are needed for uniform distribution on the azimuth angle (the distribution covers values from $0$ to $2\pi$ uniformly).
 
-Similarly to LOD, the LSD type and parameters are defined as:
+The LSD type and parameters, similarly to LOD, are defined as:
 
 ```matlab
-% LSD
 TargetDistributions.dTypeLSD = 'normal';
 TargetDistributions.fun_pLSD = @(h,d,c) [0.004 0.00025^2];
 ```
@@ -112,7 +111,20 @@ TargetDistributions.fun_pLSD = @(h,d,c) [0.004 0.00025^2];
 The `dTypeLSD` and `fun_pLSD` fields define the distribution type and parameter function for the LSD, in this case a normal distribution with expected value of 40 square centimeters and a variance of 2.5$^2$ square centimeters.
 
 {: .note } 
-The parameters of LOD inclination and azimuth angle distributions as well as LSD have to be given as function handles, even in the case they are constant or empty.
+The parameters of LOD inclination and azimuth angle distributions as well as LSD have to be given as function handles with three variables: relative height, relative branch distance, and compass direction. This hold even in the case they are constant or empty.
+
+## Setting target leaf area
+
+The target leaf area is set in square meters to a variable named `totalLeafArea`:
+
+```matlab
+totalLeafArea = 50;
+```
+
+The total leaf area can be essentially set to any positive value. In this case a total area of 50 square meters is chosen as the target. Larger values create larger foliage, which also increases the computational cost (mainly caused by the intersection prevention phase). If the value is too large the computation time can become very large as the overcrowding of leaves causes a lot of intersections. It is also possible that for too large total areas the target is not reached.
+
+{: .note }
+A realistic choice for the target leaf area can be derived, for example, by multiplying some realistic leaf area index (LAI) value with the area of the tree crown.
 
 
 [TreeQSM]: https://github.com/InverseTampere/TreeQSM
