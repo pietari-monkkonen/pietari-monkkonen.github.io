@@ -195,7 +195,7 @@ The histograms of the inclination and azimuth angles of accepted leaves can be v
 plot_LOD_inc_QSM(QSMbc,Leaves);
 plot_LOD_az_QSM(QSMbc,Leaves);
 ```
-By default, these functions consider all the generated leaves, but they can be tuned to plot only specific intervals of the structural variables. In this tutorial the LOD for inclination and azimuth angles are stationary for the whole tree, so it makes sense to see the orientation histograms of all of the generated leaves.
+By default, these functions consider all leaves generated on the QSM, but they can be tuned to plot only specific intervals of the structural variables. In this tutorial the LOD for inclination and azimuth angles are stationary for the whole tree, so it makes sense to see the orientation histograms of all of the generated leaves.
 
 ### LSD
 
@@ -204,7 +204,7 @@ The histogram of surface areas of accepted leaves can be visualized with the fol
 ```matlab
 plot_LSD_QSM(QSMbc,Leaves);
 ```
-As with LOD, by default, this functions consider all the generated leaves, but it can be tuned to plot only specific intervals of the structural variables. In this tutorial also the LSD is stationary for the whole tree, so it makes sense to see the leaf size histogram of the whole tree at once.
+As with LOD, by default, this function considers all leaves generated on the QSM, but it can be tuned to plot only specific intervals of the structural variables. In this tutorial also the LSD is stationary for the whole tree, so it makes sense to see the leaf size histogram of the whole tree at once.
 
 ## Exporting to OBJ files
 
@@ -218,6 +218,6 @@ precision = 5;
 Leaves.export_geometry('OBJ',true,'leaves_export.obj',precision);
 QSMbc.export('OBJ','qsm_export.obj','Precision',precision);
 ```
-The `precision` parameter defines the number of digits when writing the geometry to an OBJ file: higher values give more precise geometry but increase the file size, whereas small values reduce the file size but provide less accurate geometry.
+The `precision` parameter defines the number of digits used when writing the geometry to an OBJ file: higher values give more precise geometry but increase the file size, whereas small values reduce the file size but provide less accurate geometry.
 
 [TreeQSM]: https://github.com/InverseTampere/TreeQSM
