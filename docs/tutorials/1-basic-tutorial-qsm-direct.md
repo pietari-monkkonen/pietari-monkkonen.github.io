@@ -168,8 +168,56 @@ ylabel('y')
 zlabel('z')
 ```
 
-This produces a figure with the leaves in green and the QSM in brown color.
+This produces a 3D figure with green leaves and brown QSM.
 
 <img src="/assets/images/qsm-direct-3d-visualization.png" width="250" height="250" />
+
+## Visualizing leaf distributions
+
+The distributions of accepted leaves can be visualized with histograms.
+
+### LADD
+
+The histograms of accepted leaf area with respect to each of the structural variables can be visualized alongside their target distributions with the following function calls:
+
+```matlab
+plot_LADD_h_QSM(QSMbc,Leaves,TargetDistributions);
+plot_LADD_d_QSM(QSMbc,Leaves,TargetDistributions);
+plot_LADD_c_QSM(QSMbc,Leaves,TargetDistributions);
+```
+Here, again, h refers to relative height, d refers to relative branch distance, and c refers to compass direction.
+
+### LOD
+
+The histograms of the inclination and azimuth angles of accepted leaves can be visualized with the following function calls:
+
+```matlab
+plot_LOD_inc_QSM(QSMbc,Leaves);
+plot_LOD_az_QSM(QSMbc,Leaves);
+```
+By default, these functions consider all the generated leaves, but they can be tuned to plot only specific intervals of the structural variables. In this tutorial the LOD for inclination and azimuth angles are stationary for the whole tree, so it makes sense to see the orientation histograms of all of the generated leaves.
+
+### LSD
+
+The histogram of surface areas of accepted leaves can be visualized with the following functio call:
+
+```matlab
+plot_LSD_QSM(QSMbc,Leaves);
+```
+As with LOD, by default, this functions consider all the generated leaves, but it can be tuned to plot only specific intervals of the structural variables. In this tutorial also the LSD is stationary for the whole tree, so it makes sense to see the leaf size histogram of the whole tree at once.
+
+## Exporting to OBJ files
+
+The generated foliage and the QSM can be exported to Wavefront OBJ files using class functions.
+
+```matlab
+% Precision parameter for export
+precision = 5;
+
+% Exporting to obj files
+Leaves.export_geometry('OBJ',true,'leaves_export.obj',precision);
+QSMbc.export('OBJ','qsm_export.obj','Precision',precision);
+```
+The `precision` parameter defines the number of digits when writing the geometry to an OBJ file: higher values give more precise geometry but increase the file size, whereas small values reduce the file size but provide less accurate geometry.
 
 [TreeQSM]: https://github.com/InverseTampere/TreeQSM
