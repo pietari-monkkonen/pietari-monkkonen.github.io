@@ -71,7 +71,7 @@ In this example, the inclination angle marginal distribution is a generalized de
 
 ## Defining the library nodes
 
-The library consists of leaf cylinders with different attributes. These attributes are discretized and the discretization points are called nodes. So each node corresponds to some selection of cylinder and LOD & LSD attributes, and can contain one or multiple leaf cylinders with these attributes. When a leaf cylinder library is used to generate foliage on a QSM, for each cylinder of the QSM LeafGen finds the library node that corresponds closest to the attributes of the cylinder and picks one of the leaf cylinders to transform onto the QSM. The discretizations are defined to a struct named `Nodes`.
+The library consists of leaf cylinders with different attributes. These attributes are discretized and the discretization points are called nodes. So each node corresponds to some selection of cylinder and LOD & LSD attributes, and can contain one or multiple leaf cylinders with these attributes. When a leaf cylinder library is used to generate foliage on a QSM, for each cylinder of the QSM LeafGen finds the library node that corresponds closest to the attributes of the cylinder and picks one of the node's leaf cylinders. The discretizations are defined to a struct named `Nodes`.
 
 The leaf distribution attributes to discretize are:
 
@@ -117,3 +117,23 @@ Nodes.cylinderLeafArea = [0.2 0.5];
 
 {: .note }
 The number of discretization points in `Nodes` also defines the size of the leaf cylinder library. As the size of the library can grow exponentially when adding discratization points, the user should consider carefully for which attributes there should be more discretization points and which can do with less.
+
+## Leaf cylinder library generation
+
+When we have the leaf base geometry, petiole lengths, LOD and LSD types, and discretization nodes, we can generate a leaf cylinder library with the function `generate_leaf_cylinder_library'. 
+
+```matlab
+LeafCylinderLibrary = generate_leaf_cylinder_library( ...
+                          LibraryDistributions,Nodes,LeafProperties);
+```
+
+The function opens a parallel pool of computing cores to utilize parallel computation of the library cylinders. The progress of library generation is shown in a separate progress bar window.
+
+# Saving the leaf cylinder library
+
+As generating a library requires a long computation, it is worth to save it for later use as a .mat file. This can be done with the command
+
+```matlab
+save("NewLeafCyliderLibrary.mat",'-struct','LeafCylinderLibrary')
+```
+This creates a file called NewLeafCyliderLibrary.mat to the current working directory.
