@@ -71,13 +71,13 @@ In this example, the inclination angle marginal distribution is a generalized de
 
 ## Defining the library nodes
 
-The library consists of leaf cylinders with different attributes. These attributes are discretized and the discretization points are called nodes. So each node corresponds to some selection of cylinder and LOD & LSD attributes, and can contain one or multiple leaf cylinders with these attributes. When a leaf cylinder library is used to generate foliage on a QSM, for each cylinder of the QSM LeafGen finds the library node that corresponds closest to the attributes of the cylinder and picks one of the leaf cylinders to transform onto the QSM. The discretizations are defined to a struct named `Nodes`
+The library consists of leaf cylinders with different attributes. These attributes are discretized and the discretization points are called nodes. So each node corresponds to some selection of cylinder and LOD & LSD attributes, and can contain one or multiple leaf cylinders with these attributes. When a leaf cylinder library is used to generate foliage on a QSM, for each cylinder of the QSM LeafGen finds the library node that corresponds closest to the attributes of the cylinder and picks one of the leaf cylinders to transform onto the QSM. The discretizations are defined to a struct named `Nodes`.
 
 The leaf distribution attributes to discretize are:
 
-    - LOD inclination angle distribution parameters (two parameters)
-    - LOD azimuth angle distribution parameters (two parameters)
-    - LSD parameters (two parameters)
+- LOD inclination angle distribution parameters (two parameters)
+- LOD azimuth angle distribution parameters (two parameters)
+- LSD parameters (two parameters)
 
 Since a library conists of single leaf cylinders, the LADD does not need to be defined at this point. It is only needed after the library generation when calculating leaf area budgets for a QSM.
 
@@ -99,11 +99,11 @@ Nodes.pLSD2 = [0.003 0.0035];
 
 The cylinder attributes to discretize are:
 
-    - length
-    - radius
-    - inclination angle
-    - azimuth angle
-    - leaf area
+- length
+- radius
+- inclination angle
+- azimuth angle
+- leaf area
 
 These are also defined to `Nodes` struct:
 
