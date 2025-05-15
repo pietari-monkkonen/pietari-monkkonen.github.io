@@ -15,7 +15,7 @@ Options for the marginal distribution function of relative height `dTypeLADDh` a
 | Distribution      | `dTypeLADDh`   | Function Definition                                                                            |
 |-------------------|----------------|------------------------------------------------------------------------------------------------|
 | uniform           | `'uniform'`    | $f(x) = 1$                                                                                     |
-| beta              | `'beta'`       | $f(x,\alpha,\beta) = (x^{\alpha+1}(1-x)^{\beta+1})/\mathrm{B}(\alpha,\beta)$                   |
+| beta              | `'beta'`       | $f(x,\alpha,\beta) = (x^{\alpha-1}(1-x)^{\beta-1})/\mathrm{B}(\alpha,\beta)$                   |
 | truncated Weibull | `'weibull'`    | $f(x,k,\lambda) = \frac{k}{\lambda} \left( \frac{x}{\lambda} \right)^{k-1} e^{-(x/\lambda)^k}$ |
 | polynomial        | `'polynomial'` | $f(x,p_0,\ldots,p_n) = p_n x^n + \ldots + p_1 x + a_0$                                         |
 
@@ -37,7 +37,7 @@ Options for the marginal distribution function of relative branch distance / rel
 | Distribution      | `dTypeLADDd` | Function Definition                                                                              |
 |-------------------|--------------|--------------------------------------------------------------------------------------------------|
 | uniform           | `'uniform'`    | $f(x) = 1$                                                                                     |
-| beta              | `'beta'`       | $f(x,\alpha,\beta) = (x^{\alpha+1}(1-x)^{\beta+1})/\mathrm{B}(\alpha,\beta)$                   |
+| beta              | `'beta'`       | $f(x,\alpha,\beta) = (x^{\alpha-1}(1-x)^{\beta-1})/\mathrm{B}(\alpha,\beta)$                   |
 | truncated Weibull | `'weibull'`    | $f(x,k,\lambda) = \frac{k}{\lambda} \left( \frac{x}{\lambda} \right)^{k-1} e^{-(x/\lambda)^k}$ |
 | polynomial        | `'polynomial'` | $f(x,p_0,\ldots,p_n) = p_n x^n + \ldots + p_1 x + a_0$                                         |
 
@@ -91,7 +91,7 @@ Options for the marginal distribution function of leaf inclination angle `dTypeL
 | uniform              | `'uniform'`   | $f(\theta) = 2/\pi$                                                                         |
 | spherical            | `'spherical'` | $f(\theta) = \sin(\theta)$                                                                  |
 | generalized de Wit's | `'dewit'`     | $f(\theta;a,b) = (1 + a \cos(b\theta))/(\frac{\pi}{2} + \frac{a}{b} \sin(b\frac{\pi}{2}))$  |
-| beta                 | `'beta'`      | $f(\theta,\alpha,\beta) = (\theta^{\alpha+1}(1-\theta)^{\beta+1})/\mathrm{B}(\alpha,\beta)$ |
+| beta                 | `'beta'`      | $f(\theta,\alpha,\beta) = (\theta^{\alpha-1}(1-\theta)^{\beta-1})/\mathrm{B}(\alpha,\beta)$ |
 | constant value       | `'constant'`  | -                                                                                           |
 
 Here $\mathrm{B}(\alpha,\beta)  = \int_0^1 x^{\alpha-1} (1-x)^{\beta-1} dx$ is the beta function.
