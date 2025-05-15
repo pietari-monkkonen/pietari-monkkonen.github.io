@@ -23,7 +23,7 @@ addpath("visualization")
 
 ## Defining the QSM
 
-The quantitative structure model used as a basis for leaf generation is defined as the example QSM provided with the code repository of LeafGen. This is found in the example-data directory.
+The QSM used as a basis for leaf generation in this tutorial is the example QSM provided with the code repository of LeafGen. This is found in the example-data directory.
 
 ```matlab
 filename = "example-data/ExampleQSM.mat";
