@@ -137,3 +137,13 @@ As generating a library requires a long computation, it is worth to save it for 
 save("NewLeafCyliderLibrary.mat",'-struct','LeafCylinderLibrary')
 ```
 This creates a file called NewLeafCyliderLibrary.mat to the current working directory.
+
+## Defining the QSM
+
+After generating a leaf cylinder library, we can use it to generate foliage on QSMs. The QSM used as a basis for leaf generation is defined as the example QSM provided with the code repository of LeafGen. This is found in the example-data directory.
+
+```matlab
+filename = "example-data/ExampleQSM.mat";
+QSM = importdata(filename);
+```
+
