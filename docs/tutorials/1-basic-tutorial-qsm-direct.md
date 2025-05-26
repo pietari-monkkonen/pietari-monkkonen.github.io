@@ -111,7 +111,7 @@ TargetDistributions.fun_pLSD = @(h,d,c) [0.004 0.00025^2];
 The `dTypeLSD` and `fun_pLSD` fields define the distribution type and parameter function for the LSD, in this case a normal distribution with expected value of 40 square centimeters and a variance of 2.5$^2$ square centimeters.
 
 {: .note } 
-The parameters of LOD inclination and azimuth angle distributions as well as LSD have to be given as function handles with three variables: relative height, relative branch distance, and compass direction. This hold even in the case they are constant or empty.
+The parameters of LOD inclination and azimuth angle distributions as well as LSD have to be given as function handles with three variables: relative height, relative branch distance, and compass direction. This holds even in the case they are constant or empty.
 
 ## Setting target leaf area
 
@@ -199,7 +199,7 @@ By default, these functions consider all leaves generated on the QSM, but they c
 
 ### LSD
 
-The histogram of surface areas of accepted leaves can be visualized with the following functio call:
+The histogram of surface areas of accepted leaves can be visualized with the following function call:
 
 ```matlab
 plot_LSD_QSM(QSMbc,Leaves);

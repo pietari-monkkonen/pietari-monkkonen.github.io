@@ -270,7 +270,7 @@ By default, these functions consider all leaves generated on the QSM, but they c
 
 ### LSD
 
-The histogram of surface areas of accepted leaves can be visualized with the following functio call:
+The histogram of surface areas of accepted leaves can be visualized with the following function call:
 
 ```matlab
 plot_LSD_QSM(QSMbc,Leaves);
