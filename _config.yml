@@ -10,7 +10,7 @@ url: https://pietari-monkkonen.github.io/
  # Aux links for the upper right navigation
 aux_links:
   "LeafGen on GitHub":
-    - "https://github.com/pietari-monkkonen/leafgen"
+    - "https://github.com/InverseTampere/leafgen"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: true
