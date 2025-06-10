@@ -18,8 +18,8 @@ This reference can be also used to cite LeafGen.
 
 1. [Tutorials](/docs/tutorials)
 2. [Basic functionality](/docs/basic-functionality)
-3. [Leaf distribution options](/docs/distributions.md)
-4. [Additional information](/docs/additional-information.md)
+3. [Leaf distribution options](/docs/leaf-distributions)
+4. [Additional information](/docs/additional-information)
 
 You can use the navigation panel on the left to browse the contents of the documentation.
 
