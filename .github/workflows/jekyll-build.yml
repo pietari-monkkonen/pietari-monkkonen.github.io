@@ -26,7 +26,7 @@ jobs:
         run: bundle exec jekyll build
 
       - name: Upload site as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: just-the-docs-site
           path: _site/
