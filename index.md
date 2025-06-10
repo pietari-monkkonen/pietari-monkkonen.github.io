@@ -17,7 +17,7 @@ This reference can be also used to cite LeafGen.
 LeafGen is coded in MATLAB programming language and can be run using a local installation of [MATLAB](https://www.mathworks.com/products/matlab.html) or using [MATLAB online](https://www.mathworks.com/products/matlab-online.html). Once you have MATLAB set up, do the following:
 
 1. Download the LeafGen repository from [GitHub](https://github.com/InverseTampere/leafgen) and extract the files.
-2. Open the `src` folder of the extracted repository and open one of the example main files in MATLAB (preferably start with either `main_qsm_direct.m` or `main_canopy_hull.m`, as the `main_leaf_cylinder_library.m` requires a long computation.) This action opens the script to MATLAB's editor window.
+2. Open the `src` folder of the extracted repository and open one of the example main files in MATLAB (preferably start with either `main_qsm_direct.m` or `main_canopy_hull.m`, as the `main_leaf_cylinder_library.m` requires a long computation.) This action opens the file's script to MATLAB's editor window.
 3. Run the script using the "Run" button in the editor tab of MATLAB or by pressing F5 on your keyboard. If MATLAB prompts you that the chosen file is not found in the current folder, press the "Change Folder" button to go to the right folder.
 
 This makes MATLAB run one of the main demos of LeafGen, and after a while of computing should provide you with plots of the generated foliage and the realized leaf distributions.
