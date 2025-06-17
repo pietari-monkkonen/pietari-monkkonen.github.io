@@ -10,7 +10,7 @@ nav_order: 1
 
 This is the documentation of the [LeafGen package](https://github.com/InverseTampere/leafgen). Overview of the methods is presented in the article
 
-- Mönkkönen P, Van den Broeck W, Ali-Löytty S, Calders K, and Raumonen P (2025). *LeafGen*: Foliage Generation in 3D Tree Models. Methods in Ecology and Evolution. In Press. [https://doi.org/10.1111.2041-210X.70080](https://doi.org/10.1111.2041-210X.70080).
+- Mönkkönen P, Van den Broeck W, Ali-Löytty S, Calders K, and Raumonen P (2025). *LeafGen*: Foliage Generation in 3D Tree Models. Methods in Ecology and Evolution. In Press. [https://doi.org/10.1111/2041-210X.70080](https://doi.org/10.1111/2041-210X.70080).
 
 This reference can be also used to cite LeafGen.
 
@@ -35,4 +35,4 @@ This makes MATLAB run one of the main demos of LeafGen, and after a while of com
 
 ## Where to start
 
- If you are using LeafGen for the first time, we suggest checking the basic tutorials in the [Tutorials](/docs/tutorials) section to get started.
+ If you are using LeafGen for the first time, check the basic tutorials in the [Tutorials](/docs/tutorials) section to get started.
