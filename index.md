@@ -10,7 +10,7 @@ nav_order: 1
 
 This is the documentation of the [LeafGen package](https://github.com/InverseTampere/leafgen). Overview of the methods is presented in the article
 
-- Mönkkönen P, Van den Broeck W, Ali-Löytty S, Calders K, and Raumonen P (2025). *LeafGen*: Foliage Generation in 3D Tree Models. Methods in Ecology and Evolution. In Press. [https://doi.org/10.1111/2041-210X.70080](https://doi.org/10.1111/2041-210X.70080).
+- Mönkkönen P, Van den Broeck W, Ali-Löytty S, Calders K, and Raumonen P (2025). *LeafGen*: Foliage Generation in 3D Tree Models. Methods in Ecology and Evolution. [https://doi.org/10.1111/2041-210X.70080](https://doi.org/10.1111/2041-210X.70080).
 
 This reference can be also used to cite LeafGen.
 
